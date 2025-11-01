@@ -3,6 +3,8 @@ library;
 
 import 'package:go_router/go_router.dart';
 import 'package:refactaring/main.dart';
+import 'package:refactaring/ui/home/view_models/home_viewmodel.dart';
+import 'package:refactaring/ui/home/widgets/home_screen.dart';
 
 import 'routes.dart';
 
@@ -15,7 +17,7 @@ GoRouter router() => GoRouter(
   debugLogDiagnostics: true,
   routes: [
     GoRoute(path: Routes.home,builder: (context,state){
-      return MyHomePage(title: "home screen");
+      return HomeScreen(viewModel: HomeViewModel());
     }),
   ],
 );
